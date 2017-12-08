@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<package name="default" extends="struts-default">
+
+		<action name="index" class="struts2.zhuye">
+		
+			<result>/success1.jsp</result>
+			<result name="invalid.token">/wrong.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="token"></interceptor-ref>
+			
+		</action>
+		
+		
+		
+		
+	<action name="login" class="struts2.update">
+			<result name="success">/xiugai.jsp</result>
+			<result name="power">/power.jsp</result>
+		</action>
+			
+	<action name="revamp" class="struts2.revamp">
+			<result name="success">/xinxi.jsp</result>
+			<result name="error">/power.jsp</result>
+		</action>
+	
+		
+	<action name="add" class="struts2.adddata">
+			<result name="seccess">/xinxi.jsp</result>
+			<result name="power">/power.jsp</result>
+		</action>
+		
+	<action name="del" class="struts2.delet">
+			<result name="success">/xinxi.jsp</result>
+			<result name="error">/power.jsp</result>
+		</action>
+	
+	
+		
+   </package>
+</struts>
